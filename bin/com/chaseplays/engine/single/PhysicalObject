@@ -1,0 +1,46 @@
+The following is the proper usage of the PhysicalObject class.
+
+public class Example extends PhysicalObject {
+		
+		public Sprite sprite; // the sprite of the object
+		
+		public Player () {
+			
+			pWidth = 3; // player's width
+			pHeight = 3; // player's height
+			
+			thrust = 0.7; // upwards thrust when jumping
+			maximum_downwards_velocity = -0.7; // maximum velocity while falling
+			v_decay = 0.03; // the rate at which the velocity decreases (vertically)
+			
+			h_decay = 0.03; // the rate at which the velocity decreases (horizontally)
+			h_acceleration = 0.06; // the speed at which moving increases the player speed
+			maximum_h_velocity = 0.4; // maximum velocity while moving
+			
+			sprite = new Sprite(0xFFFF0000, pWidth, pHeight); // sets the sprite
+			
+		}
+		
+		public boolean level_blocked (int new_x, int new_y) {
+			
+			// check if the surroundings block the entity at certain coordinates
+			
+			return the results;
+			
+		}
+		
+		public void update (Engine e) {
+			
+			// include any necessary updates
+			
+			updatePhysics(e);
+			
+		}
+		
+		public void render (Engine e) {
+			
+			e.screen.in.render((int) x, (int) y, sprite); // render the object
+			
+		}
+		
+	}
